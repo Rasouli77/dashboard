@@ -23,7 +23,7 @@ class Product(models.Model):
 
 class Customer(models.Model):
     name = models.CharField(max_length=255, verbose_name="نام")
-    phone_number = models.CharField(max_length=11, verbose_name="شماره تلفن")
+    phone_number = models.CharField(max_length=45, verbose_name="شماره تلفن")
     rfm = models.CharField(max_length=255, verbose_name="RFM", null=True)
     address = models.TextField(verbose_name="آدرس", null=True)
     location_latitude = models.CharField(
@@ -61,7 +61,7 @@ class Invoice(models.Model):
     branch = models.CharField(max_length=255, verbose_name="شعبه", null=True)
 
     class Meta:
-        verbose_name = "فاکنور"
+        verbose_name = "فاکتور"
         verbose_name_plural = "فاکتور"
 
 
