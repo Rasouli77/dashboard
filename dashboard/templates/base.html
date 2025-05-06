@@ -11,10 +11,14 @@
             display: none;
         }
     </style>
+    <form action="" method="get" id="date-range">
+        <label for="date">From</label><br>
+        <input type="text" name="start-date" id="start-date"><br>
+        <label for="date">To</label><br>
+        <input type="text" name="end-date" id="end-date"><br>
+        <button type="submit">apply filter</button>
+    </form>
     <div id="container" style="width: 100%; height: 400px;"></div>
-    <br>
-    <br>
-    <div id="container-two" style="width: 100%; height: 400px;"></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -59,7 +63,8 @@
                     }
                 ]
             }
-        )
+        );
+
         // hide all credits
         const highChartCredits = document.querySelectorAll(".highcharts-credits")
         highChartCredits.forEach((item) => {
@@ -93,7 +98,6 @@
             childList: true,
             subtree: true
         });
-    </script>
-    
+    </script>    
 </body>
 </html>
